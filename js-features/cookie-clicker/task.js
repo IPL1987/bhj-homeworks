@@ -1,15 +1,19 @@
 'use strict'
 
 const cookieImage = document.getElementById("cookie");
-let click = document.getElementById("clicker__counter");
-let clickSpeed = document.getElementById("click__speed");
+const click = document.getElementById("clicker__counter");
+const clickSpeed = document.getElementById("click__speed");
 let nowTime = Date.now();
 let previousClick = 0;
 
 cookieImage.onclick = function () {
-  let currentClick =  click.textContent++;
+  let currentClick = click.textContent++;
 
-  cookieImage.width = 250; // как уменьшить картинку после клика?
+  if (cookieImage.width === 200) {
+    cookieImage.width += 50
+  } else if (cookieImage.width === 250) {
+    cookieImage.width -= 50
+  }   
 
   clickSpeed.textContent = (((Date.now() - nowTime) / 1000) / (currentClick - previousClick)).toFixed(2);
 };
