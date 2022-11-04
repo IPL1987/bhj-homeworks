@@ -7,13 +7,14 @@ let win = parseInt(deadMole.textContent);
 let lost = parseInt(lostMole.textContent);
 
 function checkGame(deadMole, lostMole) {
-  console.log(deadMole, lostMole);
   if (deadMole === 10) {
-    alert("Кроты мертвы!");
-    location.reload();
+    alert('Кроты мертвы!');
+    deadMole.textContent = 0; // Убрал location.reload(); но все равно почему-то не работает у меня
+    lostMole.textContent = 0;
   } else if (lostMole === 5) {
-    alert("Кроты захватили планету!");
-    location.reload();
+    alert('Кроты захватили планету!');
+    deadMole.textContent = 0;
+    lostMole.textContent = 0;
   };
 };
 
