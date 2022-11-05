@@ -1,10 +1,10 @@
 'use strict'
 
-let getHole = index => document.getElementById(`hole${index}`);
-let deadMole = document.getElementById('dead');
-let lostMole = document.getElementById('lost');
-let win = parseInt(deadMole.textContent);
-let lost = parseInt(lostMole.textContent);
+const getHole = index => document.getElementById(`hole${index}`);
+const deadMole = document.getElementById('dead');
+const lostMole = document.getElementById('lost');
+const win = parseInt(deadMole.textContent);
+const lost = parseInt(lostMole.textContent);
 
 function checkGame(deadMole, lostMole) {
   if (deadMole === 10) {
@@ -13,7 +13,7 @@ function checkGame(deadMole, lostMole) {
     lostMole.textContent = 0;
   } else if (lostMole === 5) {
     alert('Кроты захватили планету!');
-    deadMole.textContent = 0;
+    deadMole.textContent = 0; 
     lostMole.textContent = 0;
   };
 };
