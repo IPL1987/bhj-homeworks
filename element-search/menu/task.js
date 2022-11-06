@@ -13,10 +13,6 @@ for (let i = 0; i < menu_link.length; i++) {
         menu_active.className = 'menu menu_sub';
     }
 
-    if (!menu_sub) {
-      return true;
-    }
-
     if (menu_sub.className === 'menu menu_sub') {
       menu_sub.className = 'menu menu_sub menu_active';
     } else {
