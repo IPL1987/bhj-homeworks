@@ -1,30 +1,33 @@
 'use strict'
 
 const getHole = index => document.getElementById(`hole${index}`);
-const deadMole = document.getElementById('dead');
-const lostMole = document.getElementById('lost');
-const win = parseInt(deadMole.textContent);
-const lost = parseInt(lostMole.textContent);
+let deadMole = document.getElementById('dead');
+let lostMole = document.getElementById('lost');
+let win = deadMole.textContent;
+let lost = lostMole.textContent;
 
 function checkGame(deadMole, lostMole) {
   if (deadMole === 10) {
     alert('Кроты мертвы!');
-    deadMole.textContent = 0; // Убрал location.reload(); но все равно почему-то не работает у меня
-    lostMole.textContent = 0;
+    clear()
   } else if (lostMole === 5) {
     alert('Кроты захватили планету!');
-    deadMole.textContent = 0; 
-    lostMole.textContent = 0;
+    clear()
   };
 };
 
 for (let i = 1; i <= 9; i++) {
   getHole(i).onclick = function () {
     if (this.className.includes('hole_has-mole')) {
-      deadMole.textContent++;
+      win = deadMole.textContent ++;
     } else {
-      lostMole.textContent++;
+      lost = lostMole.textContent ++;
     };
     checkGame(win, lost);
   };
 };
+
+function clear () {
+  deadMole.textContent = 0; 
+  lostMole.textContent = 0;
+}
