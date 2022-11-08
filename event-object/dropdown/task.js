@@ -12,6 +12,7 @@ value.addEventListener('click', menuAction);
 links.forEach((link) => {
   link.onclick = function () {
     document.querySelector('div.dropdown__value').textContent = link.textContent;
+    return false;
   };
   link.addEventListener('click', menuAction);
 })
