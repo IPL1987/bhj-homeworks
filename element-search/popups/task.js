@@ -11,14 +11,6 @@ document.querySelector('div.modal a.btn_danger').onclick = function () {
   modalSuccess.classList.add('modal_active');
 };
 
-// document.querySelector('div.modal__close_times').onclick = function () {
-//   modalMain.classList.remove('modal_active');
-//   modalSuccess.classList.remove('modal_active');
-// };
-//-------
-// Обьясните пожалуйста, почему такой вариант не работает, и как исправить?
-//-------
-
 let arr = Array.from(document.querySelectorAll('div.modal__close_times'))
 function closePopup() {
   arr.forEach((modal) => {
