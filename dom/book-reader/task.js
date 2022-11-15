@@ -8,9 +8,9 @@ for (let control of buttons.children) {
 }
 
 function change(event) {
-  if (event.target.dataset.size === 'big') {
+  if (this.dataset.size === 'big') {
     book.classList.toggle('book_fs-big');
-  } else if (event.target.dataset.size === 'small') {
+  } else if (this.dataset.size === 'small') {
     book.classList.toggle('book_fs-small');
   } else {
     book.classList.remove('book_fs-small', 'book_fs-big');
@@ -21,5 +21,5 @@ function change(event) {
     fonts.classList.remove('font-size_active');
   }
 
-  event.target.classList.add('font-size_active');
+  this.classList.add('font-size_active');
 }
