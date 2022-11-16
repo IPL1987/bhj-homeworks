@@ -9,9 +9,11 @@ for (let control of buttons.children) {
 
 function change(event) {
   if (this.dataset.size === 'big') {
-    book.classList.toggle('book_fs-big');
+    book.classList.add('book_fs-big');
+    book.classList.remove('book_fs-small');
   } else if (this.dataset.size === 'small') {
-    book.classList.toggle('book_fs-small');
+    book.classList.add('book_fs-small');
+    book.classList.remove('book_fs-big');
   } else {
     book.classList.remove('book_fs-small', 'book_fs-big');
   }
