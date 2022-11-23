@@ -1,6 +1,6 @@
 'use strict'
-
-const add = document.querySelectorAll('.product__add');
+debugger
+const add = Array.from(document.querySelectorAll('.product__add'));
 const quantity = document.querySelectorAll('.product__quantity-controls');
 const products = document.querySelector('.cart__products');
 
