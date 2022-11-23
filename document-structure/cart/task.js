@@ -1,11 +1,10 @@
-
 'use strict'
+
 const add = document.querySelectorAll('.product__add');
 const quantity = document.querySelectorAll('.product__quantity-controls');
 const products = document.querySelector('.cart__products');
 
 for (let i = 0; i < add.length; i++) {
-
   add[i].addEventListener('click', function () {
     const currentProduct = this.closest('.product');
     const datasetId = currentProduct.dataset.id;

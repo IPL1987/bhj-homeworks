@@ -7,7 +7,7 @@ const form = document.querySelector('.tasks__control');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  if (taskInput.value.length >= 0) {
+  if (taskInput.value.length > 0) {
     tasksList.insertAdjacentHTML('beforeEnd', 
     `<div class="task">
         <div class="task__title">
