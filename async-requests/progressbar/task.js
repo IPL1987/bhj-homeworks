@@ -1,0 +1,16 @@
+'use strict'
+
+debugger
+const progress = document.getElementById('progress');
+
+document.forms.form.onsubmit = (e) => {
+  e.preventDefault();
+  const formData = new FormData(document.forms.form);
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://netology-slow-rest.herokuapp.com/upload.php');
+  xhr.upload.onprogress = (event) => {
+    progress.value = event.loaded / event.total;
+    //Как можно вывести отоюражение количества загруженных данных?
+  }
+  xhr.send(formData);
+};
