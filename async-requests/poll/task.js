@@ -6,7 +6,7 @@ xhr.open('GET', 'https://netology-slow-rest.herokuapp.com/poll.php');
 xhr.send();
 
 xhr.addEventListener('readystatechange', () => {
-  if (xhr.readyState === xhr.DONE) {
+  if (xhr.readyState === xhr.DONE && xhr.status === 200) {
     const response = JSON.parse(xhr.responseText);
     const pollTitle = document.getElementById('poll__title');
     pollTitle.textContent = response.data.title;

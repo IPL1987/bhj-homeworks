@@ -3,14 +3,14 @@
 debugger
 const loader = document.querySelector('.loader');
 const items = document.getElementById('items');
-let xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://netology-slow-rest.herokuapp.com');
 xhr.send();
 
 xhr.onreadystatechange = () => {
-  if (xhr.readyState === xhr.DONE) {
+  if (xhr.readyState === xhr.DONE && xhr.status == 200) {
     loader.classList.remove('loader_active');
-    let valute = JSON.parse(xhr.responseText).response.Valute;
+    const valute = JSON.parse(xhr.responseText).response.Valute;
 
     for (let key in valute) {
       items.insertAdjacentHTML('beforeEnd', `
