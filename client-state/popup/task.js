@@ -5,7 +5,7 @@ const modalClose = document.getElementsByClassName('modal__close');
 const modalShow = document.getElementById('subscribe-modal');
 
 function closeWindow() {
-  windowShow.className = 'modal';
+  modalShow.className = 'modal';
   document.cookie = 'window=close';
 };
 

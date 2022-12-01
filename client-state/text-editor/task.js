@@ -10,11 +10,7 @@ if (localStorage.editText !== null) {
 
 window.addEventListener('unload', () => {
   const textArea = editor.value;
-  if (textArea == undefined) {
-    textArea = '';
-  } else if (textArea !== undefined) {
-    localStorage.setItem('editText', textArea);
-  }
+  localStorage.setItem('editText', textArea);
 })
 
 reset.addEventListener('click', () => {
