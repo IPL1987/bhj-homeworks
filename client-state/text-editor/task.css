@@ -8,3 +8,11 @@ textarea {
   border: 1px solid #e2e2e2;
   box-sizing: border-box;
 }
+.reset {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px 5px;
+  width: 150px;
+  margin: 10px;
+  cursor: pointer ;
+}
