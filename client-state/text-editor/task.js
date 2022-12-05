@@ -8,7 +8,7 @@ if (localStorage.editText !== null) {
   editor.value = localStorage.editText;
 }
 
-window.addEventListener('unload', () => {
+window.addEventListener('input', () => {
   const textArea = editor.value;
   localStorage.setItem('editText', textArea);
 })
